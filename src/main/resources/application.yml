@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: productos-service
+  r2dbc:
+    url: r2dbc:h2:mem:///productosdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    pe.com.pacifico.productos: INFO
